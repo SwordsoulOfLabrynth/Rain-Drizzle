@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review</title>
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="review.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box mySwiper">
+      <div class="content swiper-wrapper">
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review5.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Khaing Thazin Htun</span>
+              <span class="profession">Backend Developer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bx-star' style="--clr:#ff0f5b"></i>
+            </div class="center">
+            <button style="--clr:#ff0f5b" id="view1" >View More</button>
+          </div>
+
+          <div class="popup" id="popup1">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>If you're on the hunt for a cozy spot to savor your next cup of coffee, 
+                look no further than Rain & Drizzle Cafe. Nestled in the heart of downtown, 
+                this charming establishment delivers a delightful blend of ambiance, 
+                quality, and comfort that makes it a standout choice for coffee enthusiasts.  </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review11.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Su Lai Mon</span>
+              <span class="profession">Web Developer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+            </div>
+            <button style="--clr:#be01fe" id="view2">View More</button>
+          </div>
+
+          <div class="popup" id="popup2">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>The seating is thoughtfully arranged, offering a mix of comfortable armchairs,
+                cozy booths, and communal tables, catering to both solo visitors and groups. 
+                The mellow background music complements the setting without overpowering it, 
+                adding to the cafe's serene vibe. </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review18.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">May Yu Ya Myet Chare</span>
+              <span class="profession">Software Developer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+            </div>
+            <button style="--clr:#fea401" id="view3">View More</button>
+          </div>
+
+          <div class="popup" id="popup3">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p> When it comes to the coffee, Rain & Drizzle Cafe truly excels.
+                Whether you prefer a classic espresso, a velvety latte, or a pour-over with nuanced flavors,
+                you're in good hands here.</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review6.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Pai Min Thway</span>
+              <span class="profession">Software Developer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bx-star' style="--clr:#ff0f5b"></i>
+            </div>
+            <button style="--clr:#ff0f5b" id="view4">View More</button>
+          </div>
+
+          <div class="popup" id="popup4">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>The staff at Rain & Drizzle Cafe are friendly, knowledgeable, and attentive. 
+                They're always ready with a smile and willing to offer recommendations based on your preferences. 
+                The service is prompt, and the baristas seem genuinely passionate about their craft, 
+                which adds to the overall positive experience.</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review7.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Ei Kinsanar Thwe</span>
+              <span class="profession">Cyber Security</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bx-star' style="--clr:#be01fe"></i>
+            </div>
+            <button style="--clr:#be01fe" id="view5">View More</button>
+          </div>
+
+          <div class="popup" id="popup5">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>Rain & Drizzle Cafe is a gem in the coffee scene, offering a perfect blend of ambiance, 
+                high-quality coffee, and excellent service. It's a wonderful place to unwind, 
+                catch up with friends, or simply enjoy a well-crafted cup of coffee.</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review8.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Shoon Lae Yi Mon</span>
+              <span class="profession">Web Designer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+            </div>
+            <button style="--clr:#fea401" id="view6">View More</button>
+          </div>
+
+          <div class="popup" id="popup6">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>Highly recommended for anyone who values a great coffee experience in a welcoming environment. </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review14.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Phone Myint Hein</span>
+              <span class="profession">YouTuber</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bx-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bx-star' style="--clr:#ff0f5b"></i>
+            </div>
+            <button style="--clr:#ff0f5b" id="view7">View More</button>
+          </div>
+
+          <div class="popup" id="popup7">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>The limited options for specialty drinks and the lack of healthy or unique choices 
+                made the menu feel rather generic and uninspired.</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review4.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Wai Phyo Aung</span>
+              <span class="profession">UX Designer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bx-star' style="--clr:#be01fe"></i>
+              <i class='bx bx-star' style="--clr:#be01fe"></i>
+            </div>
+            <button style="--clr:#be01fe" id="view8">View More</button>
+          </div>
+
+          <div class="popup" id="popup8">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>It took an unreasonably long time to get our orders, 
+                and when they did arrive, the presentation was lackluster. </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review9.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Shon Lei Zaw</span>
+              <span class="profession">Game Developer</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bx-star' style="--clr:#fea401"></i>
+              <i class='bx bx-star' style="--clr:#fea401"></i>
+            </div>
+            <button style="--clr:#fea401" id="view9">View More</button>
+          </div>
+
+          <div class="popup" id="popup9">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>Rain and Drizzle Cafe has potential but needs significant 
+                improvements across the board. </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review1.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Myat Mon Mon Zaw</span>
+              <span class="profession">Web Designe</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+              <i class='bx bxs-star' style="--clr:#ff0f5b"></i>
+            </div>
+            <button style="--clr:#ff0f5b" id="view10">View More</button>
+          </div>
+
+          <div class="popup" id="popup10">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>Really good coffee - hot and strong. Took a while for them to make it considering the place was not busy, but it was worth the wait. Free drinking water and air con too.</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>  
+
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review2.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Pyae Mon Thant</span>
+              <span class="profession">Blogger</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bxs-star' style="--clr:#be01fe"></i>
+              <i class='bx bx-star' style="--clr:#be01fe"></i>
+            </div>
+            <button style="--clr:#be01fe" id="view11">View More</button>
+          </div>
+
+          <div class="popup" id="popup11">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p>Rain & Drizzle cafe is not only for local but also for foreigner to take a perfect cafe' in mandalay. </p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <div class="image">
+              <img src="review3.jpg" alt="">
+            </div>
+            <div class="name-profession">
+              <span class="name">Phone Moe Htet</span>
+              <span class="profession">YouTuber</span>
+            </div>
+            <div class="rating">
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+              <i class='bx bxs-star' style="--clr:#fea401"></i>
+            </div>
+            <button style="--clr:#fea401" id="view12">View More</button>
+          </div>
+
+          <div class="popup" id="popup12">
+            <div class=" overlay"></div>
+            <div class="popup-content">
+              <p> As someone who has visited here many times, here is my simple review: - great quality of food and drinks- comfortable temperature and lighting (a bit cold and dim) - a relatively small area (and busy full of customers once in a while) - satisfactory customer service (the staff are pretty quiet) Other Info: - provide free wifi - charging ports available near seats - small collection of books to read from</p>
+              <div class="controls">
+                <button class="close-btn" >Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- custom js -->
+  <script src="review.js"></script>
+</body>
+</html>

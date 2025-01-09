@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: #DBB98B;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: relative;
+        }
+
+        .nav-frame {
+            width: 16%;
+            height: 100%;
+            border: none;
+            font-size: 50px;
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+
+        .content-frame {
+            height: 100%;
+            flex-grow: 1;
+            border: none;
+            background-image: url("../HomepageMedia/6.jpg")!important;
+            background-position: center!important;
+            background-repeat: no-repeat!important;
+            background-size: cover!important;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Hamburger button */
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            z-index: 10;
+        }
+
+        .hamburger .line {
+            width: 100%;
+            height: 3px;
+            background-color: #DBB98B;
+        }
+
+        /* Hidden navigation */
+        .nav-hidden {
+            width: 0;
+        }
+
+        /* Content frame takes full width when nav is hidden */
+        .content-expanded {
+            margin-left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hamburger menu button -->
+    <button class="hamburger" onclick="toggleNav()">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+
+    <div class="container">
+        <iframe src="./navigation.html" name="navi" class="nav-frame" id="navFrame"></iframe>
+        <iframe src="./homepage.html" name="content-frame" class="content-frame" id="contentFrame"></iframe>
+    </div>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(() => console.log("Service Worker Registered"))
+            .catch((error) => console.error("Service Worker Registration Failed", error));
+        }
+
+        function toggleNav() {
+            const navFrame = document.getElementById('navFrame');
+            const contentFrame = document.getElementById('contentFrame');
+
+            // Toggle nav visibility
+            navFrame.classList.toggle('nav-hidden');
+
+            // Adjust content frame width
+            if (navFrame.classList.contains('nav-hidden')) {
+                contentFrame.classList.add('content-expanded');
+            } else {
+                contentFrame.classList.remove('content-expanded');
+            }
+        }
+    </script>
+</body>
+</html>

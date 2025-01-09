@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Category</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <style>
+        html{
+            background-image: url("../HomepageMedia/6.jpg");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh; 
+            overflow: auto; 
+            overflow-y: hidden;
+            position: relative;
+        }
+        #menu-content {
+            background: #d4a06c;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("../HomepageMedia/6.jpg");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh; 
+            overflow: auto; 
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header > h1 {
+            font-family: "Brush Script MT" ,cursive;
+            font-size: 60px;
+            color: #FEFAC5;
+        }
+
+        .menuImg {
+            width: 100%;
+            height: 250px;
+        }
+
+        img ~ h2 {
+            color: burlywood;
+        }
+
+        .swiper-container {
+            position: relative;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            margin-left: 0px;
+        }
+
+        .swiper-slide-prev,
+        .swiper-slide-next {
+            transform: scale(0.85); 
+            opacity: 0.5; 
+        }
+
+        .swiper-slide-active {
+            transform: scale(1.1) !important; 
+            opacity: 1; 
+        }
+
+        .swiper-slide-active:hover {
+            transform: scale(1.2) !important; 
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #e67e22;
+            width: 40px;
+            height: 40px;
+            z-index: 10;
+        }
+
+        .swiper-button-prev {
+            left: calc(50% - 250px); 
+        }
+
+        .swiper-button-next {
+            right: calc(50% - 250px); 
+        }
+
+        .card {
+            background: linear-gradient(135deg, #53352A, #403a34);
+            background-color: #9a3d3d;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            width: 275px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .card h2 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        .card p {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- All content is wrapped in a div with a specific id -->
+    <div id="menu-content">
+        <header>
+            <h1>Our Menu</h1>
+        </header>
+        <section class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <a href="../MenuItems/Coffee.html"><img src="./Americano.jpg" alt="Delicious Food" class="menuImg"></a>
+                        <h2>Coffee</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <a href="../MenuItems/Tea.html"><img src="Jasmine tea.jpg" alt="Delicious Food" class="menuImg"></a>
+                        <h2>Tea</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <a href="../MenuItems/cake and bread.html"><img src="./dark chocolate cake.jpg" alt="Delicious Food" class="menuImg"></a>
+                        <h2>Cake & Bread</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <a href="../MenuItems/juice and Ice-cream.html"><img src="./orea cookies ice-cream.jpg" alt="Delicious Food" class="menuImg"></a>
+                        <h2>Juice & Ice-cream</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <a href="../MenuItems/Desert.html"><img src="./potato stick.jpg" alt="Desert" class="menuImg"></a>
+                        <h2>Snack</h2>
+                    </div>
+                </div>
+                <!-- Additional slides -->
+            </div>
+
+            <!-- Add Navigation Arrows -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </section>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".swiper-container", {
+                grabCursor: true,
+                loop: true,
+                centeredSlides: true,
+                spaceBetween: 20,
+                slidesPerView: 'auto',
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    700: {
+                        slidesPerView: 2,
+                    },
+                    1000: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'ArrowRight') {
+                    swiper.slideNext();  
+                } else if (event.key === 'ArrowLeft') {
+                    swiper.slidePrev();  
+                } else if (event.key === 'Enter') {
+                    // Get the active slide
+                    var activeSlide = document.querySelector('.swiper-slide-active');
+
+                    // Find the link inside the active slide and simulate a click
+                    var link = activeSlide.querySelector('a');
+                    if (link) {
+                        link.click();
+                    }
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

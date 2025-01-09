@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Booking</title>
+    <link rel="stylesheet" href="./tablebooking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1><span>Table Booking</span></h1>
+        <form class="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Arrival time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guestNumber">Enter the number of guests:</label>
+            <input type="number" id="guestNumber" name="guestNumber" min="1" step="1" required>
+
+            <label for="table">Choose your table:</label>
+            <select id="table" name="table" required>
+                <option value="1">Table 1</option>
+                <option value="2">Table 2</option>
+                <option value="3">Table 3</option>
+                <option value="4">Table 4</option>
+                <option value="5">Table 5</option>
+                <option value="6">Table 6</option>
+                <option value="7">Table 7</option>
+                <option value="8">Table 8</option>
+                <option value="9">Table 9</option>
+                <option value="10">Table 10</option>
+            </select>
+
+            <button type="button" id="showModalBtn">Show Table Images</button>
+            <button type="button" id="bookTableBtn">Book Table</button>
+        </form>
+    </div>
+
+    <!-- Modal for Table Images -->
+    <div id="tbl" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="table-images">
+                <!-- Table 1 to 10 images -->
+                <div class="table-image">
+                    <p>Table 1</p>
+                    <img src="Table1.jpg" alt="Table 1" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 2</p>
+                    <img src="Table2.jpg" alt="Table 2" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 3</p>
+                    <img src="Table3.jpg" alt="Table 3" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 4</p>
+                    <img src="Table4.jpg" alt="Table 4" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 5</p>
+                    <img src="Table5.jpg" alt="Table 5" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 6</p>
+                    <img src="Table6.jpg" alt="Table 6" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 7</p>
+                    <img src="Table7.jpg" alt="Table 7" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 8</p>
+                    <img src="Table8.jpg" alt="Table 8" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 9</p>
+                    <img src="Table9.jpg" alt="Table 9" class="rounded-image">
+                </div>
+                <div class="table-image">
+                    <p>Table 10</p>
+                    <img src="Table10.jpg" alt="Table 10" class="rounded-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div id="customAlert" class="alert-modal">
+        <div class="alert-content">
+            <p id="alertMessage">Your message goes here!</p>
+            <button id="alertOkBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="./tablebooking.js"></script>
+</body>
+</html>

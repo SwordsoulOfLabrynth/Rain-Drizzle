@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:#F4DEB3;
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px;
+}
+.container .box {
+  padding: 50px 30px;
+  overflow: hidden;
+}
+.image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: .8;
+  border: 3px solid #fff;
+}
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: transparent;
+    box-shadow:
+      inset 20px 20px 20px rgba(0, 0, 0, .05),
+      5px 25px 20px rgba(0, 0, 0, .05),
+      5px 20px 30px rgba(0, 0, 0, .05),
+      inset -20px -20px 25px rgba(255, 255, 255, .9);
+    border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
+    transition: border-radius 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card:hover {
+    border-radius: 50%;
+    transform: scale(1.1);
+  }
+  
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 85px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9;
+}
+.card .card-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.card-content .name-profession {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  color: #333;
+}
+.name-profession .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.name-profession .profession {
+  font-size: 15px;
+  font-weight: 500;
+}
+.card-content .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.card-content .rating i {
+  font-size: 22px;
+  color: var(--clr);
+  margin: 0 2px;
+  opacity: .75;
+}
+.card-content button {
+  position: relative;
+  padding: 8px 35px;
+  background: var(--clr);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  opacity: .75;
+  margin-top: 30px;
+}
+.card-content button::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+}
+.box .swiper-button-next,
+.box .swiper-button-prev {
+  color: #666;
+}
+.box .swiper-button-next {
+  right: 0;
+}
+.box .swiper-button-prev {
+  left: 0;
+}
+.box .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #666;
+}
+
+
+.popup{
+  position: absolute;
+  top: 100vh;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: top 0ms ease-in-out 300ms;
+}
+
+.popup .overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out 200ms;
+}
+
+.popup .popup-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1.15);
+  width: 95%;
+  max-width: 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  justify-content: center;
+  border-color: black;
+  z-index: 1;
+}
+
+.popup .popup-content p{
+  margin: 15px 0px;
+  color: #222;
+  font-size: 16px;
+  text-align: center;
+}
+
+.popup .popup-content .controls {
+  display: flex;
+  margin:  20px 0px 0px;
+  justify-content: center;
+}
+
+.popup .popup-content .controls button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.popup .popup-content .controls .close-btn{
+  background: transparent;
+  color: #3284ed;
+  justify-content: center;
+  
+}
+
+.popup.active{
+  top:0px;
+  transition: top 0ms ease-in-out 0ms;
+}
+
+.popup.active .overlay{
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.popup.active .popup-content{
+  transform: translate(-50%,-50%) scale(1);
+  opacity: 1;
+}
+
+p{
+  font-weight: bold;
+  
+}

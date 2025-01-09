@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+html{
+    overflow: hidden;
+}
+
+html {
+    background-image: url("./background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; 
+    width: 100%;
+    z-index: -1; 
+}
+
+.bg-blur {
+    backdrop-filter: blur(8px);  
+    -webkit-backdrop-filter: blur(8px); 
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.heading, .container {
+    position: relative;
+    z-index: 2;  
+    width: 90%;
+    margin: 0 auto;
+   
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #F8EBD7;
+    margin-bottom: 25px;
+    position: relative;
+    font-family: cursive;
+}
+
+.heading p {
+    font-size: 18px;
+    color:#F7B787;
+    margin-bottom: 30px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 600px;
+    height: 400px;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.5;
+    color:#FFEAC5;
+}
+
+.about-content h3{
+    color:#FEFEA0;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.about-content .next {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #DBB98B;
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.about-content .next:hover {
+    background-color: rgb(111,78,55);
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        padding: 0px 20px;
+    }
+
+    .heading h1 {
+        font-size: 36px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .image {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .about-content .next {
+        font-size: 16px;
+    }
+}
